@@ -182,3 +182,8 @@ def get_strategy_pnl(
 
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
+
+if __name__ == "__main__":
+    import uvicorn
+    # For local testing: python main.py
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
